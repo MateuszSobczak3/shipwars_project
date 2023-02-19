@@ -1,0 +1,49 @@
+import math #importowanie biblioteki math
+import random #importowanie biblioteki random
+a = [] #zainicjalizowanie pustej listy, przypisanej do zmiennej "a"
+a.append(random.randint(1, 99)) #dodawanie losowej liczby w formacie intiger od 1 do 99 do pustej listy "a"
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99)) 
+a.append(random.randint(1, 99))
+for i in range(10): #inicjalizacja pętli "for", ograniczonej do zakresu 10
+    g = int(input("Enter an integer from 1 to 99: ")) #utworzenie zmiennej "g" i przypisanie jej do wartości wprowadzonej przez użytkownika
+    while a[i] != g: #inicjalizacja pętli "while"  której użytkownik odgaduje wylosowaną liczbę
+        if g < a[i]:
+            print("guess is low") #komunikat - poszukiwana liczba jest mniejsza niż podana
+            g = int(input("Enter an integer from 1 to 99: ")) 
+        elif g > a[i]:
+            print("guess is high") #komunikat - poszukiwana liczba jest większa niż podana
+            g = int(input("Enter an integer from 1 to 99: "))
+        else:
+            break
+    print("you guessed it!") #przerwanie pętli kiedy użytkownik odgadnie wszystkie liczby
+
+b = [] #zainicjalizowanie pustej listy, przypisanej do zmiennej "a"
+b.append(random.randint(1, 49)) #losowanie liczby od 1 do 99 i dodawanie jej do pustej listy 
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+b.append(random.randint(1, 49))
+for i in range(10):
+    g = int(input("Enter an integer from 1 to 49: ")) #inicjalizacja pętli "for", ograniczonej do zakresu 10
+    while b[i] != g: #inicjalizacja pętli "while"  której użytkownik odgaduje wylosowaną liczbę
+        if g < b[i]:
+            print("guess is low") #komunikat - poszukiwana liczba jest mniejsza niż podana
+            g = int(input("Enter an integer from 1 to 49: "))
+        elif g > b[i]:
+            print("guess is high")  #komunikat - poszukiwana liczba jest większa niż podana
+            g = int(input("Enter an integer from 1 to 49: "))
+        else:
+            break
+    print("you guessed it!") #przerwanie pętli kiedy użytkownik odgadnie wszystkie liczby
