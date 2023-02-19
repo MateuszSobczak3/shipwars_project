@@ -36,7 +36,7 @@ b.append(random.randint(1, 49))
 b.append(random.randint(1, 49))
 b.append(random.randint(1, 49))
 for i in range(10):
-    g = int(input("Enter an integer from 1 to 49: ")) #inicjalizacja pętli "for" ograniczonej do zakresu 10
+    g = int(input("Enter an integer from 1 to 49: ")) #inicjalizacja pętli "for", ograniczonej do zakresu 10
     while b[i] != g: #inicjalizacja pętli "while"  której użytkownik odgaduje wylosowaną liczbę
         if g < b[i]:
             print("guess is low") #komunikat - poszukiwana liczba jest mniejsza niż podana
