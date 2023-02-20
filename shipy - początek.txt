@@ -1,0 +1,72 @@
+print("~~~~ Warships ~~~")
+print()
+row1 = ["A","~","~","~","~","~"]
+row2 = ["B","~","~","~","~","~"]
+row3 = ["C","~","~","~","~","~"]
+row4 = ["D","~","~","~","~","~"]
+row5 = ["E","~","~","~","~","~"]
+print()
+def table():
+  print()
+  print(row1)
+  print(row2)
+  print(row3)
+  print(row4)
+  print(row5)
+  print()
+
+table()
+
+starter_one_block_ships = ["x", "x", "x", "x"]
+starter_two_blocks_ships = ["xx", "xx", "xx"]
+free_fields = ["a","a","a","a","a","b", "b", "b", "b", "b", "c","c","c","c","c","d", "d", "d", "d", "d", "e","e","e","e","e"]
+block_fields = []
+
+choose = -1
+
+while choose !=3:
+  choose_letter = input("choose letter: ")
+  choose_number = int((input("choose number: ")))
+  print(starter_one_block_ships)
+  choose_field = (choose_letter, choose_number)
+  
+  def field_printing_forA():
+    row1[choose_number] = "x"
+    table()
+  def field_printing_forB():
+    row2[choose_number] = "x"
+    table()  
+  def field_printing_forC():
+    row3[choose_number] = "x"
+    table()  
+  def field_printing_forD():
+    row4[choose_number] = "x"
+    table()  
+  def field_printing_forE():
+    row5[choose_number] = "x"
+    table()
+  
+  def delete_used_space():
+    free_fields.remove(choose_letter)
+
+  def ship_counting():
+    try:
+      starter_one_block_ships.remove("x")
+    except(ValueError):
+      print("Wykorzystałeś wszystkie statki tego rodzaju, wybierz inny")
+      
+    print("Statki Gracz 1: ")
+    print(starter_one_block_ships)
+    print(starter_two_blocks_ships)
+    
+    if starter_one_block_ships == 0:
+      print("wykorzystałeś wszystkie statki tego rodzaju, wybierz inne")
+      
+          
+  
+  
+  field_printing_forA()
+  delete_used_space()
+  ship_counting()
+
+
