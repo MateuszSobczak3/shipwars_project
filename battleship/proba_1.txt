@@ -10,7 +10,7 @@ rows = ["A", "B", "C", "D", "E"]
 columns = ["1", "2", "3", "4", "5"]
 
 players = []
-player_1 = input("wprowadź imię pierwszego gracza: \n> ")
+player_1 = input("Wprowadź imię pierwszego gracza: \n> ")
 player_1 = player_1.upper()
 players.append(player_1)
 player_2 = input("wprowadź imię drugiego gracza: \n> ")
